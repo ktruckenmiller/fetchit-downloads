@@ -3,6 +3,7 @@ pipeline:
     image: plugins/docker
     secrets: [ docker_username, docker_password ]
     repo: ktruckenmiller/fetchit-downloads
+    email: kmtruckenmiller@gmail.com
 
   notify:
     image: plugins/slack
