@@ -1,0 +1,12 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: ktruckenmiller/fetchit-downloads
+
+  notify:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    username: drone
+    when:
+      status: [ success, failure ]

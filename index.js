@@ -10,7 +10,7 @@ var params = {
   Bucket: "fetchit"
  };
 
-server.connection({ port: 4000, host: 'localhost' });
+server.connection({ port: 4000 });
 server.start((err) => {
 
     if (err) {
