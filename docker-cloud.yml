@@ -1,0 +1,5 @@
+downloads:
+  autoredeploy: true
+  environment:
+    - 'VIRTUAL_HOST=http://downloads.myhotel.tv'
+  image: 'ktruckenmiller/fetchit-downloads:latest'

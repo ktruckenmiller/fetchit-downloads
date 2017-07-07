@@ -10,7 +10,10 @@ var params = {
   Bucket: "fetchit"
  };
 
-server.connection({ port: 4000 });
+server.connection({
+  port: 4000,
+  routes: { cors: true }
+});
 server.start((err) => {
 
     if (err) {

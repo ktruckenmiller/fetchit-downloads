@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:alpine as BOSTON
 RUN mkdir -p /project
 COPY package.json /project
 WORKDIR /project
@@ -7,3 +7,6 @@ COPY index.js /project
 COPY ./public /project/public/
 EXPOSE 4000
 ENTRYPOINT node index.js
+
+FROM BOSTON
+ENTRYPOINT echo "BOSTON"

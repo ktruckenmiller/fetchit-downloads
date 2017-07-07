@@ -13,7 +13,9 @@ export default {
   props: ['object'],
   computed: {
     name() {
-      return this.object.Key.split('/')[2];
+      // if (this.object) {
+      //   return this.object.Key.split('/')[2];
+      // }
     },
     link() {
       return `https://s3.amazonaws.com/fetchit/${this.object.Key}`;
