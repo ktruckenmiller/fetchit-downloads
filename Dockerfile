@@ -4,4 +4,5 @@ COPY package.json /build
 WORKDIR /build
 RUN npm install
 COPY . /build
+EXPOSE 3000
 CMD node app.js
