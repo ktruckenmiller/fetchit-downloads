@@ -1,9 +1,10 @@
-FROM node:alpine
-RUN mkdir -p /project
-COPY package.json /project
-WORKDIR /project
+FROM node
+RUN mkdir /build
+COPY package.json /build
+WORKDIR /build
 RUN npm install
-COPY index.js /project
-COPY ./public /project/public/
-EXPOSE 4000
-ENTRYPOINT node index.js
+COPY app.js /build
+COPY config /build/config
+COPY client /build/client
+COPY build /build/build
+CMD node app.js
