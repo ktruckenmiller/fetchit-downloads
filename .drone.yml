@@ -1,9 +1,7 @@
 pipeline:
   docker:
     image: plugins/docker
-    secrets: [username, password]
-    username: ${USERNAME}
-    password: ${PASSWORD}
+    secrets: [docker_username, docker_password]
     repo: ktruckenmiller/fetchit-downloads
     tags:
       - latest
