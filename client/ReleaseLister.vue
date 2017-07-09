@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="release_wrap">
-    <PlatformLister v-for="platform in platforms" :release="release" :platform="platform"></PlatformLister>
+    <PlatformLister v-for="platform in platforms" :release="release" :platform="platform" :key="platform+release"></PlatformLister>
   </div>
 </template>
 

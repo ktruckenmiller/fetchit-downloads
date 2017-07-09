@@ -1,8 +1,9 @@
 FROM node:8.1.3
-RUN mkdir /build
-COPY package.json /build
-WORKDIR /build
+RUN mkdir -p /project
+COPY package.json /project
+WORKDIR /project
 RUN npm install
-COPY . /build
-EXPOSE 3000
-CMD node app.js
+COPY . /project
+RUN npm build
+EXPOSE 4000
+ENTRYPOINT node app.js
